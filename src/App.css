@@ -1,0 +1,150 @@
+:root{
+  margin: 0px;
+  max-width:1200px ;
+}
+body{
+  margin: 0px;
+  padding: 0px;
+  
+}
+.container{
+  width: 100rem;
+  display: flex;
+}
+.left-side{
+  width: 30%;
+  align-items: center;
+  text-align: center;
+ 
+}
+.left-side >h1{
+  margin: 3rem;
+  padding: auto;
+}
+
+.notesBox{
+  margin: 3rem 2rem 3rem 3rem;
+  height: 550px;
+  overflow-y: scroll;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+}
+
+.notesBox:hover{
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.left-side>button{
+  position: sticky;
+  background-color: #16008B;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  color: #FFFFFF;
+  font-size: 3rem;
+  left: 400px;
+}
+
+
+.cardContainer{
+  position: static;
+  display: flex;
+  flex-direction: column;
+  /* background-color: aquamarine; */
+  margin-bottom: .6rem;
+}
+.main-card{
+  display: flex;
+  flex-direction: row;
+  padding: 4px;
+  height: 4rem;
+  width: 100%;
+}
+
+.nameCircle{
+  background-color: #0047FF;
+  width: 3.5rem;
+  border-radius: 50%;
+  margin-left: 2px;
+  margin-right: 2rem;
+  color: #FFFFFF;
+}
+
+.taskItem{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardContainer>h4{
+  font-size: 1.5rem;
+}
+
+
+
+.right-side{
+  background-color:#DAE5F5;
+  width: 70%;
+ 
+}
+
+.right-side-container{
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center; /* Horizontal alignment */
+  align-items: center;
+  flex-direction: column;
+  /* justify-content: center;
+  text-align: center;
+  align-items: center; */
+}
+
+.right-side-container>img {
+  height: 12rem;
+}
+.right-side-container>h1{
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: sans-serif;
+}
+.right-side-container>h3{
+  font-weight: 500;
+  font-family: sans-serif;
+}
+
+footer{
+  position: absolute;
+  bottom: 0px;
+}
+
+.footer-div{
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.footer-div>img{
+  padding-top: 2.4vh;
+  margin-right: 10px;
+  padding-left: 1vh;
+  height: 20px;
+}
+
+.popup-main{
+  background-color: #d5dae827;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  position: absolute;
+}
+.popup-container{
+  height: 20rem;
+  width: 50rem;
+  position: absolute;
+  top: 25%;
+  right: 25%; 
+  background-color: rgb(223, 247, 247);
+}
+
