@@ -59,12 +59,15 @@ const Notes = ({ taskId }) => {
             <header>
                 {/* Display task messages */}
                 <div className='header-container'>
-                    <div className='nameCircle-header'></div>
+                    <div className='nameCircle-header'> {taskId.slice(0, 2)}</div>
                     <div className="taskItem">
                         {taskId}
                     </div>
                 </div>
-                <div className='notes-background'>
+                
+              
+            </header>
+            <div className='notes-background'>
                 {taskMessages.map((message, index) => (
                     <div className='card-Notes' key={index}>
                           {message}
@@ -72,8 +75,6 @@ const Notes = ({ taskId }) => {
                   
                 ))}
                 </div>
-              
-            </header>
 
             <footer>
                 <div className="notes-footer">

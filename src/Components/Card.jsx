@@ -9,7 +9,7 @@ const Card = ({ onTaskClick }) => {
         <div className="cardContainer">
             {Object.keys(tasks).map((taskId, index) => (
                 <div className='main-card' key={index} onClick={() => onTaskClick(taskId)}>
-                    <div className='nameCircle'></div>
+                    <div className='nameCircle'> {taskId.slice(0, 2)} </div>
                     <div className="taskItem">
                         {taskId}
                     </div>
