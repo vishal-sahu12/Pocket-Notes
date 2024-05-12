@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import "../Css/Notes.css"
 
+import sentBtn  from "../assets/sent-btn.png"
+
 const Notes = ({ taskId }) => {
     // State to store the task messages
     const [taskMessages, setTaskMessages] = useState([]);
@@ -81,7 +83,7 @@ const Notes = ({ taskId }) => {
                     {/* Input field to enter task messages */}
                     <input type="text" placeholder="Enter Your Text here ...." value={inputValue} onChange={handleInputChange} />
                     {/* Submit button */}
-                    <button onClick={handleSubmit}>Submit</button>
+                    <button onClick={handleSubmit}><img src={sentBtn}/></button>
                 </div>
             </footer>
         </div>
