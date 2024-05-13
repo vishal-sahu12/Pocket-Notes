@@ -78,7 +78,7 @@ const Notes = ({ taskId }) => {
                 ))}
                 </div>
 
-            <footer>
+            <footer >
                 <div className="notes-footer">
                     {/* Input field to enter task messages */}
                     <input type="text" placeholder="Enter Your Text here ...." value={inputValue} onChange={handleInputChange} />

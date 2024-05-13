@@ -121,14 +121,15 @@ body{
   font-family: sans-serif;
 }
 
-footer{
+.right-side-container>footer{
   position: absolute;
   bottom: 0px;
 }
 
 .footer-div{
   display: flex;
-  margin-bottom: 2rem;
+  justify-content: center; 
+ margin-bottom: 2rem;
 }
 
 .footer-div>img{
