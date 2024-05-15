@@ -18,8 +18,23 @@
 }
 
 .modal-body{
-    display: flex;
     align-items: center;
+}
+.modal-body>div{
+    display: flex;
+    height: 5vh;
+    
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.modal-body>div>input
+{
+    padding: .5rem;
+    margin-left: 1rem;
+    width: 50%;
+
 }
 
 .modal-dialog {
@@ -38,12 +53,50 @@
     max-width: 600px;
 }
 
+
+.modal-header{
+    height: 4vh;
+    font-size: 1.3rem;
+}
+
 .close {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
+
+.colour-picker{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.colour-picker>div{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin: 0.5rem;
+
+}
+.modal-footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-footer>button{
+    background-color:#001F8B;
+    width: 6rem;
+    height: 1.7rem;
+    border-radius: 1rem;
+    font-weight: 600;
+    color: white;
+}
+.cancel-btn{
+    background-color: red !important;
+    
+}
+
 
 .close:hover,
 .close:focus {

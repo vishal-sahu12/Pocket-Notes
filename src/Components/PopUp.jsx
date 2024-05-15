@@ -1,6 +1,7 @@
 // PopUp.js
 import React, { useState } from 'react';
 import "../Css/Modal.css";
+import ColourPicker from "./ColourPicker.jsx"
 
 const PopUp = ({ show, onHide }) => {
     const [taskName, setTaskName] = useState('');
@@ -32,14 +33,19 @@ const PopUp = ({ show, onHide }) => {
                         <h4 className="modal-title">Create New Task</h4>
                     </div>
                     <div className="modal-body">
+                        <div>
                         <h3>Task Name</h3>
                         <input className='input' type="text" placeholder='Enter Task Name' value={taskName} onChange={handleNameChange} />
-                        <h3>Task Description</h3>
-                        <textarea className='input' placeholder='Enter Task Description' value={taskDescription} onChange={handleDescriptionChange} />
+                        </div>
+                        <div>
+                               
+                        <h3>Choose Colour</h3>
+                        <ColourPicker/>
+                        </div>
                     </div>
                     <div className="modal-footer">
                         <button type="button" className="btn btn-default" onClick={handleAddTask}>Create</button>
-                        <button type="button" className="btn btn-default" onClick={onHide}>Cancel</button>
+                        <button type="button" className="cancel-btn" onClick={onHide}>Cancel</button>
                     </div>
                 </div>
             </div>
