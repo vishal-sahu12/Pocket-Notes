@@ -4,6 +4,7 @@ import React from 'react';
 const Card = ({ onTaskClick }) => {
     // Retrieve the tasks object from local storage
     const tasks = JSON.parse(localStorage.getItem('tasks')) || {};
+    console.log(tasks);
 
     return (
         <div className="cardContainer">

@@ -13,7 +13,8 @@ function ColorPicker() {
   return (
     <div className='colour-picker'>
       {colors.map((color) => (
-       <div key={colors.indexOf(color)}  style={{backgroundColor:color}}>
+       <div key={colors.indexOf(color)}  
+       style={{backgroundColor:color}}>
         
          {/* <label key={color}>
           <input 

@@ -1,8 +1,7 @@
+/* Default (for larger screens) */
 .notes-container{
     width: 70vw;
 }
-
-
 
 .header-container{
     background-color: #001F8B;
@@ -10,6 +9,7 @@
     color: white;
     display: flex;
     align-items: center;
+    padding: 0 1rem;
 }
 
 .nameCircle-header{
@@ -20,24 +20,23 @@
     width: 3.5rem;
     height: 3.5rem;
     border-radius: 50%;
-    margin-left: 2px;
-    margin-right: 2rem;
-    color: #FFFFFF;
     margin-left: 1rem;
-
+    margin-right: 2rem;
+    color: white;
 }
+
 .notes-background{
     background: #DAE5F5;
-    overflow-y:scroll;
-    height:65vh;
-
+    overflow-y: auto;
+    height: 65vh;
 }
-
 
 .card-Notes{
     background-color: white;
     padding: 1rem;
     margin: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .notes-background>footer{
@@ -46,7 +45,6 @@
 }
 
 .notes-footer{
-
     display: flex;
     padding: 2rem;
     height: 8rem;
@@ -57,8 +55,85 @@
     width: 90%;
     padding: 1rem;
 }
+
 input[type="text"] {
     width: 100%;
-    box-sizing: border-box; /* Ensure padding is included in the width */
-    word-wrap: break-word; /* Wrap long words to the next line */
-  }
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+
+/* Responsive for Tablets (768px and below) */
+@media (max-width: 768px) {
+    .notes-container {
+        width: 90vw;
+    }
+
+    .header-container {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .nameCircle-header {
+        margin: 0.5rem;
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .card-Notes {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .notes-footer {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .notes-footer>input {
+        width: 100%;
+        padding: 0.75rem;
+    }
+}
+
+/* Responsive for Mobile (480px and below) */
+@media (max-width: 480px) {
+    .notes-container {
+        width: 95vw;
+    }
+
+    .header-container {
+        padding: 1rem;
+        flex-direction: column;
+        height: auto;
+        justify-content: center;
+    }
+
+    .nameCircle-header {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-right: 0.5rem;
+    }
+
+    .card-Notes {
+        margin: 0.5rem;
+        padding: 0.75rem;
+    }
+
+    .notes-footer {
+        flex-direction: column;
+        padding: 1rem;
+        height: auto;
+    }
+
+    .notes-footer>input {
+        width: 100%;
+        padding: 0.75rem;
+    }
+
+    input[type="text"] {
+        width: 100%;
+    }
+}

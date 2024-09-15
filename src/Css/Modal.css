@@ -1,5 +1,6 @@
 /* PopUp.css */
 
+/* Base Styles */
 .modal {
     position: fixed;
     z-index: 1;
@@ -8,33 +9,30 @@
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
-
-.input{
+.input {
     border-radius: 12px;
     margin-left: 4px;
 }
 
-.modal-body{
+.modal-body {
     align-items: center;
 }
-.modal-body>div{
+
+.modal-body > div {
     display: flex;
     height: 5vh;
-    
     align-items: center;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
-.modal-body>div>input
-{
-    padding: .5rem;
+.modal-body > div > input {
+    padding: 0.5rem;
     margin-left: 1rem;
     width: 50%;
-
 }
 
 .modal-dialog {
@@ -46,15 +44,14 @@
 
 .modal-content {
     background-color: #fefefe;
-    margin: 15px auto; /* Center the modal horizontally */
+    margin: 15px auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 90%;
     max-width: 600px;
 }
 
-
-.modal-header{
+.modal-header {
     height: 4vh;
     font-size: 1.3rem;
 }
@@ -66,41 +63,88 @@
     font-weight: bold;
 }
 
-.colour-picker{
+.colour-picker {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.colour-picker>div{
+
+.colour-picker > div {
     height: 2rem;
     width: 2rem;
     border-radius: 50%;
     border: 1px solid black;
     margin: 0.5rem;
-
 }
-.modal-footer{
+
+.modal-footer {
     display: flex;
     justify-content: space-between;
 }
 
-.modal-footer>button{
-    background-color:#001F8B;
+.modal-footer > button {
+    background-color: #001F8B;
     width: 6rem;
     height: 1.7rem;
     border-radius: 1rem;
     font-weight: 600;
     color: white;
 }
-.cancel-btn{
-    background-color: red !important;
-    
-}
 
+.cancel-btn {
+    background-color: red !important;
+}
 
 .close:hover,
 .close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%; /* Make modal width larger on smaller screens */
+        padding: 10px; /* Reduce padding */
+        max-width: none; /* Allow full width */
+    }
+
+    .modal-header {
+        font-size: 1.1rem; /* Reduce header font size */
+    }
+
+    .modal-body > div {
+        flex-direction: column; /* Stack the form elements vertically */
+        height: auto; /* Let height adjust naturally */
+    }
+
+    .modal-body > div > input {
+        width: 100%; /* Make inputs full width */
+        margin-left: 0; /* Remove margin */
+    }
+
+    .modal-footer > button {
+        width: 100%; /* Full width buttons */
+        margin-bottom: 1rem;
+        height: 2rem;
+    }
+
+    .modal-footer {
+        flex-direction: column; /* Stack buttons vertically */
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-header {
+        font-size: 1rem; /* Further reduce header font size */
+    }
+
+    .modal-body > div > input {
+        padding: 0.4rem; /* Smaller padding for inputs */
+    }
+
+    .modal-footer > button {
+        height: 1.5rem; /* Reduce button height */
+    }
 }
